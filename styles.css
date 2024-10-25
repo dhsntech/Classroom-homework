@@ -154,6 +154,7 @@ footer {
     line-height: 1.25;
     margin-top: 1em;
     margin-bottom: 0.5em;
+    color:black;
 }
 
 .markdown-body h1 { font-size: 2em; }
