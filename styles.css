@@ -111,8 +111,29 @@ img, iframe {
     height: auto; /* 自動高度 */
     border-radius: 5px; /* 圓角 */
 }
+
+/* 頁尾樣式 */
+footer {
+    background-color: #f1f1f1; /* 頁尾背景色 */
+    padding: 20px 0; /* 內邊距 */
+    text-align: center; /* 內容居中 */
+    border-top: 1px solid #ddd; /* 頁尾上邊框 */
+    margin-top: 20px; /* 外邊距 */
+}
+
+.footer-text {
+    font-size: 14px; /* 字體大小 */
+    color: #999; /* 字體顏色 */
+}
+
+
+
+
+
+
+
 /* Markdown 樣式 */
-/* GitHub-style Markdown CSS */
+
 .markdown-body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     line-height: 1.6;
