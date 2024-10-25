@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.3.2/markdown-it.min.js"></script>
+</head>
+<body>
+
+
+
+<main>
+    <article>
+        <div id="content">
+            正在加載文章內容...
+        </div>
+    </article>
+</main>
+
+<footer>
+    <p class="footer-text">SNTH版權所有</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOMContentLoaded 事件觸發");
+
+    const md = window.markdownit();
+    const urlParams = new URLSearchParams(window.location.search);
+    const fileParam = urlParams.get('file');
+    let fileName = fileParam ? decodeURIComponent(fileParam).toLowerCase() : 'default';
+    fileName = fileName.endsWith('.md') ? fileName : fileName + '.md';
+
+    console.log("將要加載的檔案名稱:", fileName);
+
+    fetch(fileName)
+        .then(response => {
+            console.log("Fetch 請求成功:", response.ok);
+            if (!response.ok) {
+                throw new Error('Network response was not ok.');
+            }
+            return response.text();
+        })
+        .then(text => {
+            console.log("Markdown 內容成功加載");
+            document.getElementById('content').innerHTML = md.render(text);
+            // 這裡已移除設定文章標題的部分
+        })
+        .catch(error => {
+            document.getElementById('content').innerHTML = '無法加載文章內容。';
+            console.error('Error loading markdown file:', error);
+        });
+});
+</script>
+
+</body>
+</html>
