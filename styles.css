@@ -5,21 +5,18 @@ body {
     margin: 0; /* 清除默認邊距 */
     padding: 0; /* 清除默認內邊距 */
 }
-
 header {
     background-color: #f1f1f1; /* 頁首背景色 */
     padding: 20px 0; /* 頁首內邊距 */
     border-bottom: 1px solid #ddd; /* 頁首底部邊框 */
     text-align: center; /* 頁首內容居中 */
 }
-
 header h1 {
     font-size: 2.5em; /* 標題字體大小 */
     margin: 0; /* 清除默認邊距 */
     font-weight: bold; /* 加粗 */
     color: #333; /* 字體顏色 */
 }
-
 nav ul {
     list-style-type: none; /* 去除列表項目符號 */
     padding: 0; /* 清除內邊距 */
@@ -27,35 +24,29 @@ nav ul {
     justify-content: center; /* 內容居中 */
     margin: 10px 0 0; /* 外邊距 */
 }
-
 nav ul li {
     margin: 0 15px; /* 列表項目間距 */
 }
-
 nav ul li a {
     text-decoration: none; /* 去除下劃線 */
     font-weight: bold; /* 加粗 */
     color: #007bff; /* 字體顏色 */
     font-size: 1.2em; /* 字體大小 */
 }
-
 nav ul li a:hover {
     text-decoration: underline; /* 懸停時下劃線 */
 }
-
 /* 首頁文章列表樣式 */
 main {
     max-width: 900px; /* 最大寬度 */
     margin: 40px auto; /* 外邊距 */
     padding: 20px; /* 內邊距 */
 }
-
 #article-list {
     display: grid; /* 使用網格布局 */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 列布局 */
     gap: 20px; /* 網格間距 */
 }
-
 .article-item {
     background-color: white; /* 背景色 */
     border: 1px solid #ddd; /* 邊框 */
@@ -64,30 +55,25 @@ main {
     padding: 15px; /* 內邊距 */
     transition: transform 0.2s; /* 動畫效果 */
 }
-
 .article-item:hover {
     transform: translateY(-5px); /* 懸停時的位移效果 */
 }
-
 .article-item img {
     max-width: 100%; /* 圖片最大寬度 */
     height: auto; /* 自動高度 */
     border-radius: 5px; /* 圓角 */
 }
-
 .article-item h3 {
     font-size: 1.5em; /* 標題字體大小 */
     color: #333; /* 字體顏色 */
     margin: 15px 0 10px; /* 外邊距 */
 }
-
 .article-item p {
     color: #555; /* 字體顏色 */
     font-size: 1em; /* 字體大小 */
     line-height: 1.6; /* 行高 */
     margin-bottom: 15px; /* 外邊距 */
 }
-
 .read-more-btn {
     display: inline-block; /* 內聯塊 */
     padding: 10px 20px; /* 內邊距 */
@@ -97,14 +83,35 @@ main {
     border-radius: 5px; /* 圓角 */
     font-size: 1em; /* 字體大小 */
 }
-
 .read-more-btn:hover {
     background-color: #0056b3; /* 懸停時背景顏色 */
 }
+/* 文章樣式 */
+article {
+    max-width: 900px; /* 最大寬度 */
+    margin: 40px auto; /* 外邊距 */
+    padding: 20px; /* 內邊距 */
+    background-color: white; /* 背景色 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    border-radius: 10px; /* 圓角 */
+}
+article h2 {
+    font-size: 2em; /* 標題字體大小 */
+    color: #333; /* 字體顏色 */
+    margin-bottom: 20px; /* 外邊距 */
+}
+article #content {
+    color: #555; /* 字體顏色 */
+    line-height: 1.8; /* 行高 */
+    font-size: 1.1em; /* 字體大小 */
+}
 
-
-
-/* markdown */
+img, iframe {
+    max-width: 100%; /* 圖片與 iframe 最大寬度 */
+    height: auto; /* 自動高度 */
+    border-radius: 5px; /* 圓角 */
+}
+/* Markdown 樣式 */
 .markdown-body {
   --base-size-4: 0.25rem;
   --base-size-8: 0.5rem;
@@ -1325,3 +1332,4 @@ main {
 .markdown-body>*:first-child>.heading-element:first-child {
   margin-top: 0 !important;
 }
+
